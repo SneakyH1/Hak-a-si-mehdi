@@ -1,0 +1,10 @@
+package smweb.chillana.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import smweb.chillana.model.PostModel;
+
+import java.util.List;
+
+public interface PostRepository extends JpaRepository<PostModel, Integer> {
+    List<PostModel> getAllByUserId(int userId);
+}

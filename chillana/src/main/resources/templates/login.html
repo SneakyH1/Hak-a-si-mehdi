@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" th:href="@{login.css}" />
+  <script th:src="@{login.js}"></script>
+</head>
+<body>
+
+<div class="container">
+  <!-- Left Side: Login Form -->
+  <div class="form-section">
+    <h2>Welcome Back!</h2>
+    <p>Don’t have an account? <a th:href="@{register}">Sign up</a></p>
+    <form th:action="@{login}" method="post">
+      <!-- Add matching id attributes -->
+      <label for="usernameInput">Username</label>
+      <input type="text" id="usernameInput" name="username" required>
+
+      <label for="passwordInput">Password</label>
+        <div class="password-field">
+          <input type="password" id="passwordInput" name="password" required>
+          <button type="button" id="togglePassword" >👁️</button>
+        </div>
+
+      <div class="additional-links">
+        <label><input type="checkbox" name="rememberMe"> Remember me</label>
+        <a href="#">Forgot password?</a>
+      </div>
+
+      <button type="submit">Sign In</button>
+    </form>
+
+    <div class="social-login">
+      <button><img th:src="@{/images/google.png}" alt="Google"></button>
+      <button><img th:src="@{/images/fb.png}" alt="Facebook"></button>
+      <button><img th:src="@{/images/apple.png}" alt="Apple"></button>
+    </div>
+  </div>
+
+  <!-- Right Side: Illustration -->
+  <div class="illustration-section">
+    <img th:src="@{/images/tajine.jpg}" alt="Illustration">
+  </div>
+</div>
+
+</body>
+</html>

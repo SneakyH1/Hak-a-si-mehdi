@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to Chillana</title>
+    <link rel="stylesheet" th:href="@{index.css}">
+    <script th:src="@{script.js}"></script>
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <div class="logo-container">
+        <img class="logo-image" th:src="@{/images/image.png}" alt="Chillana Logo">
+        <span class="logo-text">Chillana</span>
+    </div>
+    <div class="header-buttons">
+        <a th:href="@{/register}" class="btn-outline">Sign up</a>
+        <a th:href="@{/login}" class="btn-primary">Log in</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Join Chillana Now!</h1>
+    <p>Experience endless relaxation with Chillana. Log in or sign up to start your journey today.</p>
+    <a th:href="@{/login}" class="btn-primary hero-btn">Log in</a>
+</section>
+
+<!-- About Us Section -->
+<section class="about">
+    <h2>About Us</h2>
+    <p>Welcome to Chillana, a social media platform designed to connect you with friends and family in a relaxed and enjoyable environment. Discover new communities, share your moments, and chill with us!</p>
+    <img class="about-image" th:src="@{/images/tajine.jpg}" alt="Community Image">
+</section>
+
+</body>
+</html>

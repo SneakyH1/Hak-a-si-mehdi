@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" th:href="@{/editProfile.css}">
+    <script th:src="@{editProfile.js}" defer></script>
+</head>
+<body>
+<div class="edit-profile-container">
+    <form th:action="@{/profile/edit/{userId}(userId=${userProfile.user.id})}"
+          method="post"
+          th:object="${userProfile}"
+          enctype="multipart/form-data">
+
+        <h2>Edit Your Profile</h2>
+
+        <!-- Profile Image Section -->
+        <div class="profile-picture-section">
+            <label for="profileImage" class="profile-image-label">
+                <img id="profileImagePreview" src="default-profile.jpg" alt="Profile Picture">
+            </label>
+            <input type="file" id="profileImage" name="profileImage" accept="image/*" hidden onchange="previewProfileImage(event)">
+        </div>
+
+        <label for="bio">Bio:</label>
+        <textarea id="bio" th:field="*{bio}" placeholder="Write a short bio..."></textarea>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" th:field="*{location}" placeholder="Enter your location..."/>
+
+        <label for="backgroundImage">Background Image:</label>
+        <input type="file" id="backgroundImage" name="backgroundImage" accept="image/*" onchange="previewBannerImage(event)">
+
+        <button type="submit">Update Profile</button>
+    </form>
+
+    <div th:if="${errorMessage}" class="alert alert-danger" th:text="${errorMessage}"></div>
+    <div th:if="${successMessage}" class="alert alert-success" th:text="${successMessage}"></div>
+</div>
+</body>
+</html>

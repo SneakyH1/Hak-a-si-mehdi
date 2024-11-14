@@ -1,0 +1,170 @@
+/* Reset styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fa;
+}
+
+/* Container */
+.container {
+    display: flex;
+    max-width: 1000px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+}
+
+/* Left Side */
+.form-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-section p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.form-section p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Adjusting password field button */
+.password-field {
+    position: relative; /* Allows positioning of the button */
+    display: flex; /* Ensures input and button are aligned */
+    align-items: center; /* Vertically centers the button */
+}
+
+.password-field input {
+    padding-right: 40px; /* Space for the button */
+}
+
+#togglePassword {
+    position: absolute; /* Position the button within the input */
+    top: -8px; /* Adjust this value as needed */
+    right: 10px; /* Right margin */
+    border: none; /* No border */
+    background: transparent; /* Transparent background */
+    cursor: pointer; /* Pointer cursor */
+    outline: none; /* Remove outline */
+    font-size: 23px; /* Increase font size for better visibility */
+    width: 30px; /* Set a specific width */
+    height: 30px; /* Set a specific height */
+    padding: 0; /* Remove any padding */
+}
+
+
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Additional Links */
+.additional-links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.additional-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.additional-links a:hover {
+    text-decoration: underline;
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-login button {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.social-login button:hover {
+    border-color: #4a90e2;
+}
+
+/* Illustration Section */
+.illustration-section {
+    flex: 1;
+    background-image: url("static/images/tajine.jpg"); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
